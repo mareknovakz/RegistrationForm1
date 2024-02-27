@@ -2,8 +2,8 @@
 from Tests.LoginFill import Fill
 from Tests.Basic import BasicTools
 
-BT = BasicTools()
-BT.run_test('RegistrationForm.html')
+#bt = BasicTools()
+#bt.run_test('RegistrationForm.html')
 
-#testing_page = Fill('RegistrationForm.html')
-#Fill.fill_form('test','test@test.cz','heslo123','heslo1234')
+fi = Fill('RegistrationForm.html')
+fi.fill_form('test','test@test.com','testpass','testpass')
