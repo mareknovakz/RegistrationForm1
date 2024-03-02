@@ -1,9 +1,20 @@
-#Prostredi vyhrazene pro provolavani automatu
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 from Tests.LoginFill import Fill
-from Tests.Basic import BasicTools
+import os
 
-#bt = BasicTools()
-#bt.run_test('RegistrationForm.html')
+# data pro formulář
+LoginData = [
+    ["username", "test123"],
+    ["email", "test@test.com"],
+    ["password", "heslo123"],
+    ["confirm-password", "heslo123"]
+]
 
-fi = Fill('RegistrationForm.html')
-fi.fill_form('test','test@test.com','testpass','testpass')
+#testovany html soubor
+file = "RegistrationForm.html" #V pripade, ze by se Registration.html nachazel jinde je nutne pouzit relativni cestu
+
+fill_instance = Fill(file)
+fill_instance.Fill_strings(LoginData)
+fill_instance.Button_click("submit")
+
