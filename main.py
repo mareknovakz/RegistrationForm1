@@ -1,8 +1,6 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from Tests.LoginFill import Fill
 import os
-
+from Tests.Basic import BasicTools
 # data pro formulář
 LoginData = [
     ["username", "test123"],
